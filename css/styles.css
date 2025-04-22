@@ -17,6 +17,7 @@
     ---overlay-dark-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Header nad Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -102,6 +103,7 @@
     border-left: 0;
 }
 
+/* Main Layout */
 .main-layout {
     display: flex;
 }
@@ -111,6 +113,8 @@
     overflow-x: hidden;
     width: 100%;
 }
+
+/* Content Wrapper */
 
 .content-wrapper .category-list {
     display: flex;
@@ -129,4 +133,57 @@
     padding: 10px 20px;
     border-radius: 10px;
     background-color: var(--light-grey-color);
+}
+
+/* Video list */
+.video-list .video-card {
+    text-decoration: none;
+}
+
+.video-list .video-card .video-info {
+    display: flex;
+    gap: 0.7rem;
+    padding: 0.7rem 0.5rem;
+}
+
+.video-list .video-card .thumbnail-container {
+    position: relative;
+}
+
+.video-list .video-card .thumbnail {
+    width: 100%;
+    border-radius: 0.5rem;
+    aspect-ratio: 16/9;
+}
+
+.video-list .video-card .duration {
+    position: absolute;
+    bottom: 0.8rem;
+    right: 0.65rem;
+    color:#fff;
+    padding: 0px 0.3rem;
+    border-radius: 0.3rem;
+    font-size: 0.875rem;
+    background: var(--overlay-dark-color);
+}
+
+.video-list .video-card .icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.video-list .video-card .title {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--black-color);
+}
+
+.video-list .video-card p {
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.video-list .video-card .channel-name {
+    margin: 4px 2.4px;
 }
