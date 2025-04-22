@@ -135,6 +135,15 @@
     background-color: var(--light-grey-color);
 }
 
+/* Grid layout */
+
+.content-wrapper .video-list {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 1.25rem 0.4rem;
+}
+
 /* Video list */
 .video-list .video-card {
     text-decoration: none;
@@ -174,9 +183,17 @@
 }
 
 .video-list .video-card .title {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 600;
     color: var(--black-color);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.video-list .video-card .title:hover {
+    color: var(--primary-color);
 }
 
 .video-list .video-card p {
