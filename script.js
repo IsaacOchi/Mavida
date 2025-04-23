@@ -1,5 +1,9 @@
-const menuButton = document.querySelector('.menu-button');
+const menuButton = document.querySelectorAll('.menu-button');
+
 // Toggle sidebar visibility
-menuButton.addEventListener('click', () => {
-    document.body.classList.toggle('sidebar-hidden');
-});
+menuButton.forEach((button) => {
+    button.addEventListener('click', () => {
+        document.body.classList.toggle('sidebar-hidden');
+    });
+}
+);

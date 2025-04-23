@@ -39,23 +39,23 @@ header {
     padding: 0.5rem 1rem;
 }
 
-.navbar :where(.nav-section, .search-form, .nav-logo)
+.container :where(.nav-section, .search-form, .nav-logo)
 {
     display: flex;
     align-items: center;
 }
 
-.navbar .nav-section {
+.container .nav-section {
     gap: 20px;
 }
 
-.navbar :where(.logo, .user-image){
+.container :where(.logo, .user-image){
     width: 32px;
     cursor: pointer;
     border-radius: 50%;
 }
 
-.navbar .nav-button {
+.container .nav-button {
     border: none;
     cursor: pointer;
     height: 40px;
@@ -64,11 +64,11 @@ header {
     background: none;
 }
 
-.navbar .nav-button:hover {
+.container .nav-button:hover {
     background-color: var(--light-grey-color);
 }
 
-.navbar .nav-button i {
+.container .nav-button i {
     display: flex;
     font-size: 20px;
     align-items: center;
@@ -76,13 +76,13 @@ header {
 }
 
 
-.navbar .nav-logo {
+.container .nav-logo {
     display: flex;
     text-decoration: none;
     gap: 10px;
 }
 
-.navbar .nav-logo .logo-text {
+.container .nav-logo .logo-text {
     font-size: 24px;
     color: var(--black-color);
 }
@@ -140,6 +140,15 @@ body.sidebar-hidden .main-layout .sidebar {
     width: 0;
     padding: 0;
 }
+
+/* Hide sidebar on large devices */
+
+.main-layout .sidebar .nav-left {
+    display: none;
+    padding: 0.5rem 0.3rem;
+}
+
+/* Hide sidebar on large devices */
 
 .sidebar .link-container {
     overflow-y: auto;
@@ -302,5 +311,10 @@ body.sidebar-hidden .main-layout .sidebar {
 
     body.sidebar-hidden .main-layout .sidebar {
         left: -280px;
+    }
+
+    /* Show sidebar on mobile devices */
+    .main-layout .sidebar .nav-left {
+        display: flex;
     }
 }
