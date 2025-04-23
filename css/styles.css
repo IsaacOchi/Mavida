@@ -17,6 +17,20 @@
     ---overlay-dark-color: rgba(0, 0, 0, 0.5);
 }
 
+/* color variables for dark theme */
+body.dark-mode {
+    --white-color: #171717;
+    --black-color: #d4d4d4;
+    --light-white-color: #333;
+    --light-grey-color: #404040;
+    --border-color: #737373;
+    --secondary-color: #d4d4d4;
+}
+
+body {
+    background: var(--white-color);
+}
+
 /* Header nad Navbar */
 .container {
     display: flex;
@@ -69,6 +83,7 @@ header {
 }
 
 .container .nav-button i {
+    color: var(--black-color);
     display: flex;
     font-size: 20px;
     align-items: center;
@@ -214,6 +229,7 @@ body.sidebar-hidden .main-layout .sidebar {
     white-space: nowrap;
     padding: 10px 20px;
     border-radius: 10px;
+    color: var(--black-color);
     background-color: var(--light-grey-color);
 }
 
